@@ -38,9 +38,11 @@ class Gns3Container:
                 log.append(con_id)
                 self.send_command(cmd)
         time.sleep(1)
+        no = 1
         for _id in log:
             inspect = f"docker inspect {_id} | grep -e NanoCpus -e '" + '"Memory":' + "'"
-            print(f"{_id} => {self.send_command(inspect)}")
+            print(f"{no}.)   {_id} => {self.send_command(inspect)}")
+            no += 1
 
 
 # Gns3Container().set_resource(image_name='ugwuanyi/mec_open:latest', cpu=0.5, mem='4m')
