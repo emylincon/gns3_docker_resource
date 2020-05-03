@@ -5,8 +5,8 @@ import time
 
 class Gns3Container:
     def __init__(self):
-        self.url = "http://192.168.157.128:5555"
-        self.ip = "192.168.157.128"
+        self.url = "http://localhost:5555"
+        self.ip = "localhost"
         self.username = "gns3"
         self.password = "gns3"
 
