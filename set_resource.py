@@ -22,7 +22,6 @@ class Gns3Container:
 
         c.set_missing_host_key_policy(paramiko.AutoAddPolicy())
         c.connect(self.ip, 22, self.username, self.password)
-        # cmd = "curl http://localhost:5555/images/json"
 
         stdin, stdout, stderr = c.exec_command(cmd)
         return {'stdout': self.format_data(stdout), 'stderr': self.format_data(stderr)}
@@ -31,7 +30,7 @@ class Gns3Container:
         client = docker.DockerClient(base_url=self.url)
         data = client.containers.list()
         log = []
-        # docker inspect e6d1 | grep -e NanoCpus -e '"Memory":'
+
         for con in data:
             if con.attrs['Config']['Image'] == image_name:
                 con_id = con.attrs['Id']
