@@ -45,4 +45,4 @@ class Gns3Container:
             no += 1
 
 
-# Gns3Container().set_resource(image_name='ugwuanyi/mec_open:latest', cpu=0.5, mem='512m')
+# Gns3Container().set_resource(image_name='ugwuanyi/mec_open2:latest', cpu=0.5, mem='512m')
