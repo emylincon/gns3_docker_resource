@@ -45,4 +45,6 @@ class Gns3Container:
             no += 1
 
 
+# # Gns3Container().set_resource(image_name='ugwuanyi/mec_open2:latest', cpu=0.5, mem='512m')
+# docker inspect 9243b | grep -e NanoCpus -e '"Memory":'
 # Gns3Container().set_resource(image_name='ugwuanyi/mec_open2:latest', cpu=0.5, mem='512m')
