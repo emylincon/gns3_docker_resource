@@ -1,6 +1,8 @@
 ## Set Docker Resource in GNS3
 Set CPU and Memory Resource for Docker Containers running on GNS3
 
+![](https://github.com/emylincon/gns3_docker_resource/workflows/myaction/badge.svg)
+
 ## To Use
 * Modify the below as necessary
 ```python
