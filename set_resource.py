@@ -17,7 +17,7 @@ class Gns3Container:
             out += i
         return out
 
-    def send_command(self, cmd):
+    def send_command(self, cmd:str) -> dict:
         c = paramiko.SSHClient()
 
         c.set_missing_host_key_policy(paramiko.AutoAddPolicy())
@@ -26,7 +26,7 @@ class Gns3Container:
         stdin, stdout, stderr = c.exec_command(cmd)
         return {'stdout': self.format_data(stdout), 'stderr': self.format_data(stderr)}
 
-    def set_resource(self, con_name=None, image_name=None, cpu=0, mem=0):
+    def set_resource(self, con_name:str=None, image_name:str=None, cpu:float=0, mem:float=0) -> None:
         client = docker.DockerClient(base_url=self.url)
         data = client.containers.list()
         log = []
