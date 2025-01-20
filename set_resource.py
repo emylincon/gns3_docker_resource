@@ -26,7 +26,7 @@ class Gns3Container:
         stdin, stdout, stderr = c.exec_command(cmd)
         return {'stdout': self.format_data(stdout), 'stderr': self.format_data(stderr)}
 
-    def set_resource(self, con_name:str=None, image_name:str=None, CPU:float=0, mem:float=0) -> None:
+    def set_resource(self, con_name:str=None, image_name:str=None, cpu:float=0, mem:float=0) -> None:
         client = docker.DockerClient(base_url=self.url)
         data = client.containers.list()
         log = []
